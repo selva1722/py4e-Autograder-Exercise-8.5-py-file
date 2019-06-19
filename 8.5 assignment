@@ -1,0 +1,10 @@
+fname=input("Enter the File Name:")
+fh=open(fname)
+count=0
+for line in fh :
+	if not line.startswith('From'):continue
+	if not line.startswith('From:'):continue
+	t1=line.split()
+	print(t1[1])
+	count=count+1
+print("There were", count, "lines in the file with From as the first word")
